@@ -14,7 +14,7 @@ Este es mi **Proyecto Intermodular**, el más completo hasta la fecha. Es una pl
 - **Tecnologías usadas:** Java (Lógica), MySQL (Base de Datos), GitHub (Control de versiones).
 - **Documentación:** Incluye el diagrama Entidad-Relación normalizado.
 
-📂 **[Ver Repositorio de RoomMi](AQUÍ_EL_ENLACE_A_TU_REPO_DE_ROOMMI)**
+📂 **[Ver Repositorio de RoomMi](https://github.com/enrique22-22/Proyecto-Intermodular-RoomMi)**
 
 ---
 
