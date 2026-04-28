@@ -21,7 +21,7 @@ Este es mi **Proyecto Intermodular**, el más completo hasta la fecha. Es una pl
 ### 💻 2. Prácticas de Programación (Java)
 Repositorio donde almaceno todos los ejercicios y algoritmos realizados en el módulo de Programación. Incluye lógica de control, gestión de objetos y estructuras de datos.
 
-📂 **[Ver Repositorio de Programación](AQUÍ_EL_ENLACE_DE_PROGRAMACION)**
+📂 **[Ver Repositorio de Programación](https://github.com/enrique22-22/Programacion-Programas-Java)**
 
 ---
 
