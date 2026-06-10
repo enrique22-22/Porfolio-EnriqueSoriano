@@ -1,6 +1,3 @@
-
-raw
-Portfolio · HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -276,6 +273,7 @@ nav.scrolled{background:rgba(10,10,15,.88);backdrop-filter:blur(16px);border-bot
 .t-cursor-inline{display:inline-block;width:8px;height:.88em;background:var(--accent2);vertical-align:text-bottom;animation:blink .7s step-end infinite;}
  
 .projects-section{margin-bottom:80px;}
+.personal-section{margin-bottom:80px;}
 .projects-list{display:flex;flex-direction:column;gap:16px;}
 .project-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:inherit;display:block;transition:border-color .3s,background .3s;position:relative;overflow:hidden;}
 .card-glow{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(139,127,245,.15),transparent 70%);pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;top:50%;left:50%;}
@@ -309,8 +307,43 @@ nav.scrolled{background:rgba(10,10,15,.88);backdrop-filter:blur(16px);border-bot
 .s-progress{color:var(--accent3);}
 .s-active .status-dot{background:var(--accent2);box-shadow:0 0 6px var(--accent2);}
 .s-active{color:var(--accent2);}
+.cs-icon{font-size:32px;margin-bottom:14px;display:block;animation:csFloat 3s ease-in-out infinite;}
+@keyframes csFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.cs-title{font-size:17px;font-weight:700;margin-bottom:8px;color:var(--accent3);}
+.cs-desc{font-size:14px;color:var(--muted);line-height:1.6;max-width:420px;margin:0 auto;font-weight:400;}
+.cs-badge{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;color:var(--accent3);background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.25);border-radius:99px;padding:4px 12px;margin-top:18px;}
+.cs-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent3);animation:pulse 2s infinite;}
  
 .learning-section{margin-bottom:80px;}
+ 
+/* ── PERSONAL PROJECTS ── */
+.personal-section{margin-bottom:80px;}
+.personal-coming-soon{
+  background:var(--surface);border:1px dashed rgba(245,166,35,.3);
+  border-radius:16px;padding:36px;text-align:center;
+  position:relative;overflow:hidden;
+  transition:border-color .3s,box-shadow .3s;
+}
+.personal-coming-soon:hover{
+  border-color:rgba(245,166,35,.55);
+  box-shadow:0 0 40px rgba(245,166,35,.08);
+}
+.personal-coming-soon::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 50%,rgba(245,166,35,.04),transparent 70%);
+}
+.cs-icon{font-size:32px;margin-bottom:14px;display:block;animation:csFloat 3s ease-in-out infinite;}
+@keyframes csFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.cs-title{font-size:17px;font-weight:700;margin-bottom:8px;color:var(--accent3);}
+.cs-desc{font-size:14px;color:var(--muted);line-height:1.6;max-width:420px;margin:0 auto;font-weight:400;}
+.cs-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'DM Mono',monospace;font-size:11px;
+  color:var(--accent3);background:rgba(245,166,35,.08);
+  border:1px solid rgba(245,166,35,.25);border-radius:99px;
+  padding:4px 12px;margin-top:18px;
+}
+.cs-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent3);animation:pulse 2s infinite;}
 .learning-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;}
 .learning-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;transition:all .25s;position:relative;overflow:hidden;}
 .learning-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
@@ -378,8 +411,10 @@ footer a{color:var(--accent);text-decoration:none;}
     <div class="nav-logo"><span>~/</span>enrique</div>
     <div class="nav-links">
       <a href="#proyectos">Proyectos</a>
+      <a href="#proyectos-propios">Proyectos propios</a>
       <a href="#contacto">Contacto</a>
       <a href="https://github.com/enrique22-22" target="_blank">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/enrique-soriano-7a83b034b/" target="_blank">LinkedIn ↗</a>
     </div>
   </nav>
  
@@ -435,8 +470,8 @@ footer a{color:var(--accent);text-decoration:none;}
   </section>
  
   <section class="projects-section" id="proyectos">
-    <div class="section-label">Trabajo</div>
-    <div class="section-title glitch reveal" data-text="Proyectos destacados">Proyectos destacados</div>
+    <div class="section-label">Proyectos de clase</div>
+    <div class="section-title glitch reveal" data-text="Proyectos académicos">Proyectos académicos</div>
     <div class="projects-list">
       <a class="project-card featured reveal" href="https://enrique22-22.github.io/Proyecto-Intermodular-RoomMi/" target="_blank">
         <div class="card-glow"></div>
@@ -477,6 +512,19 @@ footer a{color:var(--accent);text-decoration:none;}
     </div>
   </section>
  
+  <section class="personal-section" id="proyectos-propios">
+    <div class="section-label">Verano 2025 →</div>
+    <div class="section-title glitch reveal" data-text="Proyectos propios">Proyectos propios</div>
+    <div class="projects-list">
+      <div class="personal-coming-soon reveal">
+        <span class="cs-icon">🚀</span>
+        <div class="cs-title">Próximamente...</div>
+        <p class="cs-desc">Esta sección se llenará con proyectos personales que desarrollaré durante el verano. Cada uno tendrá su propio repositorio en GitHub.</p>
+        <span class="cs-badge">En construcción</span>
+      </div>
+    </div>
+  </section>
+ 
   <section class="learning-section">
     <div class="section-label">Crecimiento</div>
     <div class="section-title reveal">Actualmente aprendiendo</div>
@@ -495,7 +543,14 @@ footer a{color:var(--accent);text-decoration:none;}
     </div>
   </section>
  
-  <footer><p>Hecho con HTML, CSS y ganas · <a href="https://github.com/enrique22-22" target="_blank">github.com/enrique22-22</a></p></footer>
+  <footer>
+    <p>Hecho con HTML, CSS y ganas</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-top:12px;flex-wrap:wrap;">
+      <a href="https://github.com/enrique22-22" target="_blank">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/enrique-soriano-7a83b034b/" target="_blank">LinkedIn ↗</a>
+      <a href="mailto:enrique.sorianoo22@gmail.com">enrique.sorianoo22@gmail.com</a>
+    </div>
+  </footer>
 </div>
 </div>
  
